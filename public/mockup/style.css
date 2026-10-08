@@ -124,7 +124,7 @@ body {
 	border: 1px solid rgba(16,24,40,0.03);
 	color: inherit;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-columns: minmax(0, 3.5fr) minmax(0, 1.5fr);
     align-items: center;
     gap: 1rem;
 }
@@ -146,7 +146,11 @@ body {
 }
 
 .todoCardMeta {
-    display: contents;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    min-width: 0;
 }
 
 .day {
@@ -179,6 +183,10 @@ body {
 
 .todoTitle {
     font-size: 1rem;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .dayGroup .todoTitle {
@@ -191,6 +199,10 @@ body {
 
 .badges {
 	display: flex;
+}
+
+.todoCardMeta .badges > :last-child {
+    margin-right: 0;
 }
 
 .actionSection {
