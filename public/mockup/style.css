@@ -209,6 +209,11 @@ body {
     font-weight: 600;
 }
 
+.todoCard.isDone .todoTitle {
+    color: var(--muted);
+    text-decoration: line-through;
+}
+
 .badges {
 	display: flex;
 }
