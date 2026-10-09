@@ -1,0 +1,16 @@
+@import '../../index.css';
+
+.footer {
+  position: static;
+  flex-shrink: 0;
+  margin-top: auto;
+  width: min(100%, var(--max-width));
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  background: var(--footer-bg);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+  backdrop-filter: blur(8px);
+}

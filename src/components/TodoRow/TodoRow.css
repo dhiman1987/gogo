@@ -1,0 +1,210 @@
+@import '../../index.css';
+
+.todoCard {
+  background: var(--card-bg);
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border-radius: calc(var(--radius) * 1.5);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+  border: 1px solid rgba(16, 24, 40, 0.03);
+  color: inherit;
+  display: grid;
+  grid-template-columns: minmax(0, 3.5fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+.todoCardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.doneBadge,
+.rescheduleBadge,
+.overdueBadge {
+  font-size: 0.5rem;
+  font-weight: 700;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0.25rem 0.25rem 0;
+}
+
+.doneBadge {
+  color: var(--done-green);
+  background-color: var(--done-light-green);
+}
+
+.rescheduleBadge {
+  color: var(--reschedule-purple);
+  background-color: var(--reschedule-light-purple);
+}
+
+.overdueBadge {
+  color: var(--overdue-orange);
+  background-color: var(--overdue-light-orange);
+}
+
+.todoTitle {
+  font-size: 1rem;
+  line-height: 1.4;
+  min-width: 0;
+  height: 1.4em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  interpolate-size: allow-keywords;
+  transition:
+    height 450ms cubic-bezier(0.4, 0, 0.2, 1),
+    white-space 0s linear 450ms;
+  transition-behavior: normal, allow-discrete;
+}
+
+.todoTitle:hover {
+  height: auto;
+  text-overflow: clip;
+  white-space: normal;
+  transition-delay: 0s, 0s;
+}
+
+.dayGroup .todoTitle {
+  color: var(--muted);
+}
+
+.currentDayGroup .todoTitle {
+  font-weight: 600;
+}
+
+.todoCard.isDone .todoTitle {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.badges {
+  display: flex;
+}
+
+.todoCardMeta .badges > :last-child {
+  margin-right: 0;
+}
+
+.actionSection {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.doneButton .icon,
+.rescheduleButton .icon,
+.deleteButton .icon,
+.cancelButton .icon {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+.doneButton,
+.rescheduleButton,
+.deleteButton,
+.cancelButton {
+  background: var(--button-light-grey);
+  color: var(--button-grey);
+  border: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition:
+    width 200ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.doneButton .btnLabel,
+.rescheduleButton .btnLabel,
+.deleteButton .btnLabel,
+.cancelButton .btnLabel {
+  display: inline-block;
+  margin-left: 0;
+  max-width: 0;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    max-width 220ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  line-height: 1;
+  overflow: hidden;
+}
+
+.doneButton:hover,
+.doneButton:focus-visible,
+.rescheduleButton:hover,
+.rescheduleButton:focus-visible,
+.cancelButton:hover,
+.cancelButton:focus-visible,
+.deleteButton:hover,
+.deleteButton:focus-visible {
+  width: 120px;
+}
+
+.doneButton:hover,
+.doneButton:focus-visible {
+  background: var(--done-green);
+  color: var(--done-light-green);
+}
+
+.rescheduleButton:hover,
+.rescheduleButton:focus-visible {
+  background: var(--reschedule-purple);
+  color: var(--reschedule-light-purple);
+}
+
+.cancelButton:hover,
+.cancelButton:focus-visible {
+  background: var(--button-grey);
+  color: var(--button-light-grey);
+}
+
+.deleteButton:hover,
+.deleteButton:focus-visible {
+  background: var(--danger);
+  color: var(--danger-light);
+}
+
+.doneButton .icon,
+.rescheduleButton .icon,
+.cancelButton .icon,
+.deleteButton .icon {
+  transition:
+    color 180ms ease,
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.doneButton:hover .btnLabel,
+.doneButton:focus-visible .btnLabel,
+.rescheduleButton:hover .btnLabel,
+.rescheduleButton:focus-visible .btnLabel,
+.deleteButton:hover .btnLabel,
+.deleteButton:focus-visible .btnLabel,
+.cancelButton:hover .btnLabel,
+.cancelButton:focus-visible .btnLabel {
+  opacity: 1;
+  transform: translateX(0);
+  margin-left: 8px;
+  max-width: 160px;
+}

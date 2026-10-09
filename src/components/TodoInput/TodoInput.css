@@ -1,0 +1,84 @@
+@import '../../index.css';
+
+.addNoteSection {
+  text-align: center;
+  flex-shrink: 0;
+  padding: 0.5rem;
+  width: 95%;
+  margin: 1rem;
+  border-radius: calc(var(--radius) * 1.5);
+  background-color: var(--primary-color);
+}
+
+.addNoteSecondRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.addNote {
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 0.25rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.addNote:focus {
+  outline: none;
+}
+
+.todoDatePicker {
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.todoDatePicker:hover {
+  background-color: var(--primary-dark-color);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.addNoteButton {
+  background: var(--primary-color);
+  color: var(--bg);
+  border: none;
+  padding: 0;
+  width: 120px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.addNoteButton .icon {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+.addNoteButton .btnLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-left: 5px;
+}
+
+.addNoteButton:hover {
+  background-color: var(--primary-dark-color);
+}
