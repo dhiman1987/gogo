@@ -1,0 +1,122 @@
+[
+  {
+    "id": "00000000-0000-4000-8000-000000000001",
+    "title": "Summarize feedback from the five pilot customers and send recommendations to product before Thursday's roadmap review",
+    "status": "done",
+    "plannedDate": "2026-10-10",
+    "createdDate": "2026-10-08",
+    "rescheduleCount": 2
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000002",
+    "title": "Confirm the catering count with the venue",
+    "status": "todo",
+    "plannedDate": "2026-10-10",
+    "createdDate": "2026-10-10",
+    "rescheduleCount": 0
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000003",
+    "title": "Send the updated accessibility notes to the design team",
+    "status": "todo",
+    "plannedDate": "2026-10-10",
+    "createdDate": "2026-10-09",
+    "rescheduleCount": 1
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000004",
+    "title": "Brainstorm on the new TODO app.",
+    "status": "done",
+    "plannedDate": "2026-10-09",
+    "createdDate": "2026-10-07",
+    "rescheduleCount": 2
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000005",
+    "title": "Compare the latest accessibility report with last month's results and assign owners for the remaining keyboard-navigation issues",
+    "status": "todo",
+    "plannedDate": "2026-10-09",
+    "createdDate": "2026-10-09",
+    "rescheduleCount": 0
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000006",
+    "title": "Integrate designed page in actuall app",
+    "status": "todo",
+    "plannedDate": "2026-10-09",
+    "createdDate": "2026-10-09",
+    "rescheduleCount": 0
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000007",
+    "title": "Prepare a handoff for the weekend on-call engineer with known alerts, open incidents, and escalation contacts",
+    "status": "done",
+    "plannedDate": "2026-10-09",
+    "createdDate": "2026-10-07",
+    "rescheduleCount": 2
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000008",
+    "title": "Create GUI in plain HTML and CSS.",
+    "status": "todo",
+    "plannedDate": "2026-10-09",
+    "createdDate": "2026-10-09",
+    "rescheduleCount": 0
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000009",
+    "title": "Integrate designed page in actuall app",
+    "status": "todo",
+    "plannedDate": "2026-10-09",
+    "createdDate": "2026-10-09",
+    "rescheduleCount": 0
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000010",
+    "title": "Audit the open support tickets and summarize repeat billing issues",
+    "status": "todo",
+    "plannedDate": "2026-10-08",
+    "createdDate": "2026-10-07",
+    "rescheduleCount": 1
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000011",
+    "title": "Collect the print order",
+    "status": "todo",
+    "plannedDate": "2026-10-08",
+    "createdDate": "2026-10-08",
+    "rescheduleCount": 0
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000012",
+    "title": "Compare the latest accessibility report with last month's results and assign owners for the remaining keyboard-navigation issues",
+    "status": "todo",
+    "plannedDate": "2026-10-08",
+    "createdDate": "2026-10-08",
+    "rescheduleCount": 0
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000013",
+    "title": "Schedule an equipment return with IT",
+    "status": "todo",
+    "plannedDate": "2026-10-08",
+    "createdDate": "2026-10-06",
+    "rescheduleCount": 2
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000014",
+    "title": "Confirm the event start time with the speakers",
+    "status": "todo",
+    "plannedDate": "2026-10-08",
+    "createdDate": "2026-10-08",
+    "rescheduleCount": 0
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000015",
+    "title": "Prepare a handoff for the weekend on-call engineer with known alerts, open incidents, and escalation contacts",
+    "status": "todo",
+    "plannedDate": "2026-10-08",
+    "createdDate": "2026-10-08",
+    "rescheduleCount": 0
+  }
+]

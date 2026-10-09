@@ -1,28 +1,24 @@
 import TodoDayGroup from '../TodoDayGroup/TodoDayGroup'
+import type { DateOnly } from '../../models/DateOnly'
+import type { Todo } from '../../models/Todo'
 import './TodoList.css'
 
-export type Todo = {
-  title: string
-  completed: boolean
-  badge?: string
-  badgeType?: 'reschedule' | 'overdue'
-}
-
 export type TodoGroup = {
-  date: string
+  date: DateOnly
   isToday: boolean
   todos: Todo[]
 }
 
 type TodoListProps = {
   groups: TodoGroup[]
+  today: DateOnly
 }
 
-function TodoList({ groups }: TodoListProps) {
+function TodoList({ groups, today }: TodoListProps) {
   return (
     <div className="todoList">
       {groups.map((group) => (
-        <TodoDayGroup group={group} key={group.date} />
+        <TodoDayGroup group={group} today={today} key={group.date} />
       ))}
     </div>
   )

@@ -1,23 +1,34 @@
-import type { Todo } from '../TodoList/TodoList'
+import type { DateOnly } from '../../models/DateOnly'
+import type { Todo } from '../../models/Todo'
+import { TodoStatus } from '../../models/TodoStatus'
 import './TodoRow.css'
 
 type TodoRowProps = {
   todo: Todo
   groupIsToday: boolean
+  today: DateOnly
 }
 
-function TodoRow({ todo, groupIsToday }: TodoRowProps) {
+function TodoRow({ todo, groupIsToday, today }: TodoRowProps) {
+  const isOverdue =
+    todo.status === TodoStatus.Todo && todo.plannedDate < today
+
   return (
-    <article className={`todoCard${todo.completed ? ' isDone' : ''}`}>
+    <article
+      className={`todoCard${todo.status === TodoStatus.Done ? ' isDone' : ''}`}
+    >
       <div className="todoTitle">{todo.title}</div>
       <div className="todoCardMeta">
         <div className="badges">
-          {todo.badge && todo.badgeType && (
-            <span className={`${todo.badgeType}Badge`}>{todo.badge}</span>
+          {todo.rescheduleCount > 0 && (
+            <span className="rescheduleBadge">
+              {todo.rescheduleCount}x RESCHEDULE
+            </span>
           )}
+          {isOverdue && <span className="overdueBadge">OVERDUE</span>}
         </div>
         <div className="actionSection">
-          {groupIsToday && !todo.completed && (
+          {groupIsToday && todo.status === TodoStatus.Todo && (
             <>
               <button
                 className="doneButton"

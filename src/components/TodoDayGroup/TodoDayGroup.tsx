@@ -1,19 +1,23 @@
 import TodoRow from '../TodoRow/TodoRow'
+import type { DateOnly } from '../../models/DateOnly'
 import type { TodoGroup } from '../TodoList/TodoList'
 import './TodoDayGroup.css'
 
 type TodoDayGroupProps = {
   group: TodoGroup
+  today: DateOnly
 }
 
-function TodoDayGroup({ group }: TodoDayGroupProps) {
+function TodoDayGroup({ group, today }: TodoDayGroupProps) {
+  const formattedDate = `${group.date.slice(8, 10)}/${group.date.slice(5, 7)}`
+
   return (
     <section
       className={group.isToday ? 'currentDayGroup' : 'dayGroup'}
-      aria-label={group.isToday ? `${group.date}, today` : group.date}
+      aria-label={group.isToday ? `${formattedDate}, today` : formattedDate}
     >
       <h3 className={group.isToday ? undefined : 'day'}>
-        {group.date}
+        {formattedDate}
         {group.isToday && (
           <>
             {' '}
@@ -21,11 +25,12 @@ function TodoDayGroup({ group }: TodoDayGroupProps) {
           </>
         )}
       </h3>
-      {group.todos.map((todo, index) => (
+      {group.todos.map((todo) => (
         <TodoRow
           groupIsToday={group.isToday}
           todo={todo}
-          key={`${todo.title}-${index}`}
+          today={today}
+          key={todo.id}
         />
       ))}
     </section>
